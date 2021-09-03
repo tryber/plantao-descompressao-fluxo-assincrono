@@ -1,6 +1,24 @@
 {
+  "name": "plantao-descompressao-fluxo-assincrono",
+  "version": "1.0.0",
+  "description": "",
+  "main": "01_sincrono.js",
   "dependencies": {
-    "mongodb": "^4.1.1",
-    "mysql2": "^2.3.0"
-  }
+    
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tryber/plantao-descompressao-fluxo-assincrono.git"
+  },
+  "keywords": [],
+  "author": "Renatão Monstro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tryber/plantao-descompressao-fluxo-assincrono/issues"
+  },
+  "homepage": "https://github.com/tryber/plantao-descompressao-fluxo-assincrono#readme"
 }

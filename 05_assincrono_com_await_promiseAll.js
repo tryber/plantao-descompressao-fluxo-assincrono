@@ -11,12 +11,14 @@ const fileNames = [
   './files/AllCards.json',
 ];
 
-fileNames.forEach(async (fileName) => {
+const allPromises = fileNames.map(async (fileName) => {
   const timers = { start: new Date() };
   const file = await fs.readFile(fileName);
   timers.end = new Date();
   printWithSpace(file, fileName, timers);
 });
 
-timerTotal.end = new Date();
-console.log(`\nTempo total:\t\t\t ${timerTotal.end - timerTotal.start}ms`);
+Promise.all(allPromises).then(() => {
+  timerTotal.end = new Date();
+  console.log(`\nTempo total:\t\t ${timerTotal.end - timerTotal.start}ms`);
+});
