@@ -1,8 +1,6 @@
 const fs = require('fs').promises;
 const { printWithSpace } = require('./util/func');
 
-const timerTotal = { start: new Date() };
-
 const fileNames = [
   './files/scryfall.json',
   './files/Legacy.json',
@@ -12,7 +10,9 @@ const fileNames = [
 ];
 
 fileNames.forEach((fileName) => {
-  fs.readFile(fileName).then(function (file) {
+	console.log(`Pedindo para ler o arquivo ${fileName}`);
+  const promise = fs.readFile(fileName);
+	promise.then(function (file) {
     printWithSpace(file, fileName);
   });
 });

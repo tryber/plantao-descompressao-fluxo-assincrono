@@ -10,6 +10,7 @@ const fileNames = [
 ];
 
 fileNames.forEach((fileName) => {
+	console.log(`Pedindo para ler o arquivo ${fileName}`);
   const file = fs.readFileSync(fileName);
   printWithSpace(file, fileName);
 });

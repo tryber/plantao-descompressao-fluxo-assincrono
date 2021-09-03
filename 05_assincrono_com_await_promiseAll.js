@@ -1,8 +1,6 @@
 const fs = require('fs').promises;
 const { printWithSpace } = require('./util/func');
 
-const timerTotal = { start: new Date() };
-
 const fileNames = [
   './files/scryfall.json',
   './files/Legacy.json',
