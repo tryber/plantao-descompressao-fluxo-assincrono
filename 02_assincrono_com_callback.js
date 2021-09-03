@@ -12,12 +12,8 @@ const fileNames = [
 ];
 
 fileNames.forEach((fileName) => {
-  const timers = { start: new Date() };
   fs.readFile(fileName, (_, file) => {
-    timers.end = new Date();
-    printWithSpace(file, fileName, timers);
+    printWithSpace(file, fileName);
   });
 });
 
-timerTotal.end = new Date();
-console.log(`\nTempo total:\t\t\t ${timerTotal.end - timerTotal.start}ms`);
